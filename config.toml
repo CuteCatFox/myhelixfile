@@ -1,0 +1,37 @@
+theme = "onedark"
+
+[editor]
+mouse = true
+cursorline = true
+bufferline = "multiple"
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[keys.insert]
+"C-[" = "normal_mode"
+
+[keys.select]
+"C-[" = "normal_mode"
+
+[editor.soft-wrap]
+enable = true
+[keys.normal]
+"A-k" = ["delete_selection", "move_line_up", "paste_before"]
+"A-j" = ["delete_selection", "paste_after"]
+"A-h" = ["goto_line_start"]
+"A-l" = ["goto_line_end"]
+"C-q" = [":buffer-close"]
+"C-h" = [":buffer-previous"]
+"C-l" = [":buffer-next"]
+
+[editor.lsp]
+display-messages = true
+
+[editor.cursor-shape]
+insert = "bar"
